@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js
-    https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data-1970-2030.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data-1970-2030.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>World Clock Project</title>
   </head>
@@ -18,16 +18,16 @@
         <option value="Pacific/Auckland">Auckland</option>
       </select>
 
-      <div class="city">
+      <div class="city" id="edinburgh">
         <div class="row">
           <div class="column">
             <h2>Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿</h2>
             <div class="date">Date</div>
           </div>
-          <div class="time">TIME <small>AM</small></div>
+          <div class="time">TIME</div>
         </div>
 
-        <div class="row">
+        <div class="row" id="svalbard">
           <div class="column">
             <h2>Svalbard 🐻‍❄️</h2>
             <div class="date">Date</div>
@@ -35,7 +35,7 @@
           <div class="time">TIME <small>AM</small></div>
         </div>
 
-        <div class="row">
+        <div class="row" id="auckland">
           <div class="column">
             <h2>Auckland 🇳🇿</h2>
             <div class="date">Date</div>
@@ -43,7 +43,7 @@
           <div class="time">TIME <small>AM</small></div>
         </div>
 
-        <div class="row">
+        <div class="row" id="rothera">
           <div class="column">
             <h2>Rothera 🇦🇶</h2>
             <div class="date">Date</div>
