@@ -48,7 +48,12 @@ footer {
   border-bottom: 1px dashed lightgray;
 }
 
-.row:last-child {
+/* .row:last-child {
+  border: none;
+} */
+
+/* Removed code above which prevented the injected code from having a border-bottom */
+#rothera {
   border: none;
 }
 
