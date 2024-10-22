@@ -67,3 +67,31 @@ function updateTime() {
 
 updateTime();
 setInterval(updateTime, 1000);
+
+// New City from Drop Down Menu
+
+function updateLocation(event) {
+  let locationTimeZone = event.target.value;
+  //   console.log(locationTimeZone);
+  let locationName = locationTimeZone.replace("_", " ").split("/")[1];
+  let locationTime = moment().tz(locationTimeZone);
+  //   console.log(locationTime.format("MMMM do YYYY"));
+  let newCityElement = document.querySelector("#newCity");
+  //   newCityElement.innerHTML = "Hello";
+  //   newCityElement.innerHTML = locationTimeZone;
+  newCityElement.innerHTML = `
+        <div class="row" id="">
+          <div class="column">
+            <h2>${locationName} </h2>
+            <div class="date">${locationTime.format("dddd, MMMM Do YYYY")}</div>
+          </div>
+          <div class="time">${locationTime.format(
+            "h:mm:ss [<small>]A[</small>]"
+          )}</div>
+        </div>
+        `;
+}
+
+let locationSelectElement = document.querySelector("#location");
+
+locationSelectElement.addEventListener("change", updateLocation);
